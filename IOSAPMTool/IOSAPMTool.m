@@ -24,7 +24,7 @@
 #define NBYTE_PER_MB (float)(1024 * 1024)
 
 // 获取当前app的cpu占有率， %
-float getAppUsedCPU(void)
+float GetAppUsedCPU(void)
 {
     kern_return_t           kr;
     thread_array_t          thread_list;
@@ -62,7 +62,7 @@ float getAppUsedCPU(void)
 }
 
 // 获取当前app使用的内存大小，单位M
-float getAppUsedMemory(void)
+float GetAppUsedMemory(void)
 {
 
     task_vm_info_data_t taskInfo;
@@ -76,7 +76,7 @@ float getAppUsedMemory(void)
 }
 
 // 获取ios剩余可用的内存大小， 单位M
-float getSysFreeMemory(void)
+float GetSysFreeMemory(void)
 {
     vm_statistics64_data_t vmstat;
     natural_t size = HOST_VM_INFO64_COUNT;
@@ -89,7 +89,7 @@ float getSysFreeMemory(void)
 }
 
 // 获取ios全部的内存使用情况，单位M
-float getSysUsedMemory(void)
+float GetSysUsedMemory(void)
 {
     vm_statistics64_data_t vmstat;
     natural_t size = HOST_VM_INFO64_COUNT;
@@ -101,7 +101,7 @@ float getSysUsedMemory(void)
 }
 
 // 获取ios总内存大小，单位M
-float getSysAllMemory(void)
+float GetSysAllMemory(void)
 {
     vm_statistics64_data_t vmstat;
     natural_t size = HOST_VM_INFO64_COUNT;
@@ -113,7 +113,7 @@ float getSysAllMemory(void)
 }
 
 // 获取当前的电量，百分比
-double getBatteryLevel(void)
+double GetBatteryLevel(void)
 {
     UIDevice *device = [UIDevice currentDevice];
     device.batteryMonitoringEnabled = YES;
@@ -125,7 +125,7 @@ double getBatteryLevel(void)
 * is the current dirty memory limit minus the dirty memory footprint used at the
 * time of the query.
 */
-float availableMemory()
+float AvailableMemory()
 {
     if (@available(iOS 13.0, *)) {
         return os_proc_available_memory() / NBYTE_PER_MB;

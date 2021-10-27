@@ -12,19 +12,19 @@
 extern "C"{
 #endif
 
-    float getAppUsedCPU(void);
+    float GetAppUsedCPU(void);
     
-    float getAppUsedMemory(void);
+    float GetAppUsedMemory(void);
     
-    float getSysAllMemory(void);
+    float GetSysAllMemory(void);
     
-    float getSysFreeMemory(void);
+    float GetSysFreeMemory(void);
     
-    float getSysUsedMemory(void);
+    float GetSysUsedMemory(void);
     
-    double getBatteryLevel(void);
+    double GetBatteryLevel(void);
 
-    float availableMemory(void);
+    float AvailableMemory(void);  //该接口返回的数值等于设备总内存减去脏内存的大小,仅适用于ios 13.0以上的版本
     
 #ifdef __cplusplus
 }
