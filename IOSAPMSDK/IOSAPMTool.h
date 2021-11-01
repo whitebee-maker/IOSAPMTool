@@ -12,19 +12,19 @@
 extern "C"{
 #endif
 
-    float getAppUsedCPU(void);
+    float GetProcessUsedCPU(void);
     
-    float getAppUsedMemory(void);
+    float GetProcessUsedMemory(void);
     
-    float getSysAllMemory(void);
+    float GetDeviceTotalMemory(void);
     
-    float getSysFreeMemory(void);
+    float GetDeviceFreeMemory(void);
     
-    float getSysUsedMemory(void);
+    float GetDeviceUsedMemory(void);
     
-    double getBatteryLevel(void);
+    double GetBatteryLevel(void);
 
-    float availableMemory(void);
+    float GetDeviceAvailableMemory(void);
     
 #ifdef __cplusplus
 }
