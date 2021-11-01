@@ -14,7 +14,7 @@ extern "C"{
 
     float GetProcessUsedCPU(void);
     
-    float GetProcessUsedMemory(void);
+    float GetMemoryFootprint(void);
     
     float GetDeviceTotalMemory(void);
     

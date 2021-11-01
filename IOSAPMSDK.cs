@@ -8,7 +8,7 @@ public class IOSAPMSDK : MonoBehaviour
     [DllImport("__Internal")]
     internal extern static float GetProcessUsedCPU();         //返回当前进程占用的cpu, %
     [DllImport("__Internal")]
-    internal extern static float GetProcessUsedMemory();      //返回当前进程使用的内存, 单位M
+    internal extern static float GetMemoryFootprint();      //返回当前进程使用的内存, 单位M
     [DllImport("__Internal")]
     internal extern static float GetDeviceTotalMemory();      //返回设备总的内存, 单位M
     [DllImport("__Internal")]

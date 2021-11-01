@@ -62,7 +62,7 @@ float GetProcessUsedCPU(void)
 }
 
 // 获取当前app使用的内存大小，单位M
-float GetProcessUsedMemory(void)
+float GetMemoryFootprint(void)
 {
 
     task_vm_info_data_t taskInfo;
